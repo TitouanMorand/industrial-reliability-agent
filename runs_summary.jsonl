@@ -1,0 +1,2 @@
+{"run_id": "20260108_224239", "config": "configs/baseline.yaml", "train_mse": 1699.7475667317708, "val_mse": 1818.4614065069902, "train_rmse": 41.22799493950404, "val_rmse": 42.64342160881313, "epochs": 10, "n_parameters": 47169}
+{"run_id": "20260108_224708", "config": "configs/longer_window.yaml", "train_mse": 1582.034756747159, "val_mse": 1786.0329055786133, "train_rmse": 39.774800524291244, "val_rmse": 42.26148252935069, "epochs": 10, "n_parameters": 47169}
