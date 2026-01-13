@@ -1,0 +1,49 @@
+model:
+  cnn_channels: 32
+  cnn_kernel_size: 3
+  gru_hidden_size: 64
+  gru_num_layers: 1
+  dropout: 0.0
+  head_hidden_size: 64
+  head_dropout: 0.3
+  temporal_aggregation: attention
+  bidirectional: false
+
+training:
+  batch_size: 64
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0
+  loss: huber
+  huber_beta: 20
+  grad_clip: 5.0
+
+  aux_hi: true
+  hi_lambda: 0.2
+  consistency_lambda: 0.1
+
+  near_failure_weighting:
+    enabled: true
+    mode: exp
+    alpha: 2.0
+    tau: 20.0
+
+data:
+  seq_len: 75
+  rul_cap: 125
+
+  max_train_rul: null
+
+  val_units_frac: 0.2
+  val_trunc_rul: 70
+
+  pad_short_sequences: true
+  padding_mode: zeros
+
+  hi:
+    mode: linear
+
+  feature_selection:
+    mode: spearman
+    top_k: 14
+    min_abs: 0.0

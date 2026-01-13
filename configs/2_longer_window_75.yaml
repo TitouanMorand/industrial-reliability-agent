@@ -1,0 +1,21 @@
+model:
+  n_features: 24
+
+  cnn:
+    out_channels: 64
+    kernel_size: 5
+
+  gru:
+    hidden_size: 64
+
+  head:
+    hidden_size: 32
+
+training:
+  batch_size: 128
+  epochs: 10
+  learning_rate: 0.001
+
+data:
+  rul_cap: 125
+  seq_len: 75
